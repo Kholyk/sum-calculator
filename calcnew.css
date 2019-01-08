@@ -1,0 +1,210 @@
+/* MAIN */
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+.ui-slider-horizontal {
+    height: .2em;
+  }
+  
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1.6em;
+    height: 1.6em;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+  
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.7em;
+    margin-left: -.6em;
+}
+  
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 8px;
+}
+.sect {
+    text-align: center;
+}
+
+.sect .slider-legend {
+    height: 115px;
+    margin-bottom: 10px;
+}
+
+.sect img {
+    height:80px;
+    display: inline-block;
+}
+
+#final-price {
+    border: 1px dashed #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 3rem;
+}
+
+
+#grid {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sect-1 sect-2 sect-3 sect-4 sect-5"
+                         "sect-6 sect-7 sect-8 sect-9 result-block";
+    
+}
+
+#grid > .sect {
+    /* width:200px; */
+    padding: 20px;
+
+}
+
+sect-1, sect-2, sect-3, sect-4, sect-5 {
+    border-bottom: #fff dashed 1px;
+}
+
+#grid > sect-1 {
+    background: #596a72;
+    grid-area: sect-1;
+}
+#grid > sect-2 {
+    background: #596a72;
+    grid-area: sect-2;
+}
+#grid > sect-3 {
+    background: #596a72;
+    grid-area: sect-3;
+}
+#grid > sect-4 {
+    background:#597264;
+    grid-area: sect-4;
+    border-left: 1px dashed #fff;
+}
+#grid > sect-5 {
+    background:#597264;
+    grid-area: sect-5;
+}
+#grid > sect-6 {
+    background: #595972;
+    grid-area: sect-6;
+}
+#grid > sect-7 {
+    background: #595972;
+    grid-area: sect-7;
+}
+#grid > sect-8 {
+    background: #595972;
+    grid-area: sect-8;
+}
+#grid > sect-9 {
+    background: #595972;
+    grid-area: sect-9;
+}
+#grid > result-block {
+    grid-area: result-block;
+}
+
+#grid > result-block {
+    background:#ffa600;
+    color:#000;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Large Devices, Wide Screens */
+
+@media
+only screen
+and (max-width : 1200px) {
+   
+}
+
+/* Medium Devices, Desktops */
+
+@media
+only screen
+and (max-width : 992px) {
+   
+}
+
+/* Small Devices, Tablets */
+
+@media
+only screen
+and (max-width   : 768px)
+and (orientation : portrait) {
+    
+
+
+    /* iPad in Portrait */
+    @media
+    only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation      : portrait) {
+     
+    }
+}
+
+/* iPad in Landscape */
+
+@media
+only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation      : andscape) {
+
+ 
+}
+
+@media
+only screen
+and (max-width   : 768px)
+and (orientation : andscape) {
+ 
+}
+
+/* Extra Small Devices, Phones */
+
+@media
+only screen
+and (max-width : 480px) {
+    #grid {
+        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5 1fr);
+        grid-template-areas: "sect-1 sect-1 sect-1 sect-1"
+                             "sect-2 sect-2 sect-2 sect-2"
+                             "sect-3 sect-3 sect-3 sect-3"
+                             "sect-4 sect-4 sect-5 sect-5"
+                             "result-block result-block result-block result-block";
+        
+    }
+    #grid > sect-6 {
+        display:none;
+    }
+    #grid > sect-7 {
+        display:none;
+    }
+    #grid > sect-8 {
+        display:none;
+    }
+    #grid > sect-9 {
+        display:none;
+    }
+ 
+}
+
+/* Custom, iPhone Retina */
+
+@media
+only screen
+and (max-width : 320px) {
+ 
+
+}
